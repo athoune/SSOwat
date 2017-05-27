@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+    ldap:
+        image: dinkel/openldap
+        ports:
+            - 389
+        environment:
+            SLAPD_PASSWORD: s3cr3t
+            SLAPD_DOMAIN: example.com
+
+    nginx:
+        build:
+            context: .
+        links:
+            - ldap
+        ports:
+            - 80
