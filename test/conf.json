@@ -1,0 +1,30 @@
+{
+   "portal_scheme": "https",
+   "portal_domain": "example.com",
+   "portal_path": "/ssowat/",
+   "domains": [
+        "example.com",
+        "example.org"
+    ],
+   "skipped_urls": [
+       "example.com/megusta",
+       "example.org/somuchwin"
+    ],
+   "unprotected_urls": ["example.com/yunoprotect"],
+   "additional_headers": {
+       "Auth-User": "uid",
+       "Remote-User": "uid",
+       "Email": "mail",
+       "Name": "cn"
+   },
+   "users": {
+       "myuser": {
+          "example.com/myapp": "My App",
+          "example.com/myapp2": "My second App"
+       },
+       "myuser2": {
+          "example.org/myapp": "My other domain App",
+          "example.com/myapp2": "My second App"
+       }
+   }
+}
